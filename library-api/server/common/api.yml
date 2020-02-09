@@ -1,0 +1,88 @@
+openapi: 3.0.1
+info:
+  title: library-api
+  description: Library RESTful API
+  version: 1.0.0
+servers:
+  - url: /api/v1
+tags:
+  - name: Library books
+    description: Simple library endpoints
+  - name: Specification
+    description: The swagger API specification
+paths:
+  /book:
+    get:
+      tags:
+        - book
+      description: Fetch all books
+      responses:
+        200:
+          description: Returns all books
+          content: {}
+    post:
+      tags:
+        - book
+      description: Create a new book
+      requestBody:
+        description: a book
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookBody'
+        required: true
+      responses:
+        200:
+          description: Returns a book
+          content: {}
+  /book/{id}:
+    delete:
+      tags:
+        - book
+      parameters:
+        - name: id
+          in: path
+          description: The id of the example to retrieve
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Return the example with the specified id
+          content: {}
+        404:
+          description: Example not found
+          content: {}
+  /spec:
+    get:
+      tags:
+        - Specification
+      responses:
+        200:
+          description: Return the API specification
+          content: {}
+components:
+  schemas:
+    BookBody:
+      title: book
+      required:
+        - title
+        - author
+        - isbn
+      type: object
+      properties:
+        title:
+          type: string
+          example: My Book
+        synopsis:
+          type: string
+          example: A funny tale where things happen
+        author:
+          type: string
+          example: Miss Peach
+        isbn:
+          type: number
+          example: 123455779
+        year:
+          type: number
+          example: 2020
