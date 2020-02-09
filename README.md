@@ -1,9 +1,6 @@
-# Library app demo for Kubernetes guide
+# Library demo app
 
-
-> What is it and why (expand into extra sub-sections with architectural overview etc if necessary)
-
-This is a three-tier web application for demonstrative usage in my *Get a feel for Kubernetes* guide.
+This is a three-tier web application for educational usages.
 
 It has three sub-components:
 
@@ -12,7 +9,7 @@ It has three sub-components:
 * `infra` -- Kubernetes assets
 
 Functionality:
-
+ 
 * List books
 * Add a book
 * Remove a book
