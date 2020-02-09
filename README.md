@@ -1,6 +1,6 @@
 # Library demo app
 
-This is a three-tier web application for educational usages.
+This is a three-tier web application to be used for general educational purposes.
 
 It has three sub-components:
 
@@ -9,7 +9,7 @@ It has three sub-components:
 * `infra` -- Kubernetes assets
 
 Functionality:
- 
+
 * List books
 * Add a book
 * Remove a book
