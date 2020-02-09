@@ -4,8 +4,8 @@ This is a three-tier web application to be used for general educational purposes
 
 It has three sub-components:
 
-* `library-ui` -- Tiny reactJS application for library management
-* `library-api` -- Tiny Typescript expressJS web server for REST web API
+* `ui` -- Tiny reactJS application for library management (Produces `sbracegirdle/library-ui` Docker image)
+* `api` -- Tiny Typescript expressJS web server for REST web API (Produces `sbracegirdle/library-api` Docker image)
 * `infra` -- Kubernetes assets
 
 Functionality:

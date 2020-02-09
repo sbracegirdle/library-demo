@@ -1,0 +1,17 @@
+# Example composition for testing purposes
+version: '2'
+services:
+  ui:
+    image: sbracegirdle/library-ui
+    ports:
+      - 3000:80
+
+  api:
+    image: sbracegirdle/library-api
+    environment:
+      - APP_ID=library-api
+      - PORT=3001
+      - LOG_LEVEL=debug
+      - REQUEST_LIMIT=100kb
+      - SESSION_SECRET=mySecret
+      - OPENAPI_SPEC=/api/v1/spec

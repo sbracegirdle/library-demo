@@ -11,7 +11,10 @@
     "lint": "tsc --noEmit && eslint -c .eslintrc.js '{server, test}/*.{js,ts,tsx}' --quiet",
     "lint:fix": "tsc --noEmit && eslint -c .eslintrc.js '{server, test}/*.{js,ts,tsx}' --quiet --fix",
     "test": "mocha test/**/*.ts --exit",
-    "test:debug": "mocha --inspect-brk test/**/*.ts --exit"
+    "test:debug": "mocha --inspect-brk test/**/*.ts --exit",
+    "build": "npm run compile",
+    "build:image": "npm run build && docker build . -t sbracegirdle/library-api",
+    "push": "docker push sbracegirdle/library-api"
   },
   "dependencies": {
     "@types/joi": "^14.3.4",

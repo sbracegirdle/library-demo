@@ -14,8 +14,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:image": "react-scripts build && docker build . -t library-ui",
+    "build:image": "react-scripts build && docker build . -t sbracegirdle/library-ui",
     "build:theme": "npx tailwind build theme.css -o src/index.css",
+    "push": "docker push sbracegirdle/library-ui",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
